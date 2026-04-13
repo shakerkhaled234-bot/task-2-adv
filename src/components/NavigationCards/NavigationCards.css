@@ -1,0 +1,140 @@
+
+.nav-cards-section {
+  background-color: rgba(255, 245, 240, 1);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.nav-cards-header {
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+}
+
+.explore-badge {
+  border: 2px solid #1a1a1a;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  background: #fff;
+  display: inline-block;
+}
+
+.nav-cards-header h1 {
+  font-size: 38px;
+  margin: 20px 0;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.nav-cards-header p {
+  color: #4c4c4c;
+  line-height: 1.6;
+}
+
+
+.nav-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.nav-custom-card {
+  background: #ffffff;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 8px 8px 0px #1a1a1a; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-custom-card h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+
+.line {
+  flex: 1; 
+  height: 6px; 
+    background-color: #ff8d4d;
+  border: 2px solid #1a1a1a; 
+  border-radius: 4px;
+  position: relative;
+  box-shadow: none;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #1a1a1a; 
+  border-radius: 50%;
+  background-color: #fff;
+  flex-shrink: 0;
+}
+
+.orange-divider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  gap: 6px; 
+}ورة */
+.learn-more-button {
+  background-color: #ffe5d1; 
+  border: 2px solid #1a1a1a;
+  border-radius: 12px;
+  padding: 15px;
+  width: 100%;
+  font-weight: 700;
+  box-shadow: 0px 5px 0px #1a1a1a; 
+  transition: all 0.1s ease-in-out;
+}
+
+.learn-more-button:hover {
+  background-color: #ffdbbf;
+}
+.card-desc {
+  color: #333;
+  line-height: 1.7;
+  font-size: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+
+.learn-more-button {
+  background-color: #fdf2e9;
+  border: 2px solid #1a1a1a;
+  border-radius: 10px;
+  padding: 12px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0px 4px 0px #1a1a1a;
+  transition: 0.2s;
+}
+
+.learn-more-button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 2px 0px #1a1a1a;
+}
+
+@media (max-width: 992px) {
+  .nav-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

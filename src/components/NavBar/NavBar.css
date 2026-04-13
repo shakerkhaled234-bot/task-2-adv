@@ -1,0 +1,206 @@
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(255, 245, 240, 1);
+}
+
+.nav-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1819px;
+height: 80px;
+    border: 2px solid #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    gap: 10px;
+    background-color: #FF9466;
+    padding: 15px 25px;
+    border-right: 2px solid #1a1a1a;
+    font-weight: 800;
+    color: #1a1a1a;
+    white-space: nowrap; 
+}
+
+.logo-icon-nav {
+    width: 40px;
+    height: 40px;
+    background: #1a1a1a;
+    transform: rotate(45deg);
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.nav-links-list {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    border-left: 2px solid #1a1a1a;
+}
+
+.nav-links-list li {
+    padding: 15px 25px;
+    border-right: 2px solid #1a1a1a;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    white-space: nowrap;
+        height: 80px;
+     padding-top: 30px;
+}
+
+.nav-links-list li:last-child {
+    border-right: none;
+}
+
+.nav-links-list li.active { background-color: #fff5f0; }
+.nav-links-list li.contact-btn { background-color: #ffb48f; }
+.nav-links-list li:hover { background-color: #fff5f0; }
+
+
+
+@media (max-width: 1440px) {
+    .nav-main-container {
+        max-width: 1339px; 
+    }
+    .nav-links-list li {
+    padding-top: 30px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .nav-main-container {
+        border-radius: 8px;
+    }
+
+    .logo-section {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+
+    .nav-links-list li {
+   padding: 20px;
+   padding-top: 20px;
+        font-size: 0.85rem;
+
+    }
+
+
+    .nav-main-container {
+        gap: 0; 
+    }
+}
+
+
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #FFF5F0;
+    height: 80px;
+    justify-content: center;
+    border-left: 2px solid #1a1a1a;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #1a1a1a;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+
+@media (max-width: 768px) {
+    .nav-main-container {
+        display: flex;
+        width: 100%;
+        height: 80px;
+        justify-content: space-between;
+        align-items: stretch;
+        position: relative;
+    }
+
+
+    .logo-section {
+        background-color: #FF9466; 
+        flex: 2; 
+        border-right: 2px solid #1a1a1a;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+
+    .nav-spacer {
+        flex: 1;
+        background-color: #ffffff;
+        border-right: 2px solid #1a1a1a;
+    }
+
+    .mobile-menu-btn {
+        flex: 1;
+        background-color: #FFF5F0; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .hamburger-icon span {
+        width: 25px;
+        height: 2px;
+        background: #1a1a1a;
+        border-radius: 2px;
+    }
+
+
+    .nav-links-list {
+        display: none;
+        position: absolute;
+        top: 82px; 
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        border: 2px solid #1a1a1a;
+        border-radius: 0 0 12px 12px;
+        z-index: 100;
+    }
+
+    .nav-links-list.open {
+        display: flex; 
+    }
+
+    .nav-links-list li {
+        padding: 20px;
+        text-align: center;
+        border-bottom: 2px solid #1a1a1a;
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-links-list li:last-child {
+        border-bottom: none;
+    }
+}
