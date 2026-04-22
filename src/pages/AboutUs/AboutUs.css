@@ -1,0 +1,668 @@
+
+
+.about-hero-btn{
+ button{
+    width: 117px;
+    height: 47px;
+    border-radius: 8px;
+    background-color: white;
+ }
+}
+.about-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; 
+}
+
+
+.about-content-flex {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 40px; 
+}
+
+.about-content-flex h1 {
+    flex: 1; 
+    max-width: 500px; 
+    margin: 0;
+
+}
+
+.about-content-flex p {
+    flex: 1; 
+    max-width: 600px; 
+    margin: 0;
+}
+
+/* الحاوية التي تجمع المربعات بجانب بعضها */
+/* الحاوية الكلية للمربعات في الزاوية */
+.about-hero-container {
+    margin: 20px 10px;
+    border: 2px solid black;
+    padding: 100px 80px;
+    border-radius: 12px;
+    box-shadow: 5px 5px rgba(30, 30, 30, 1);
+    
+    /* هذا السطر هو المفتاح لظهور المربعات داخل الصندوق */
+    position: relative; 
+    
+    /* لضمان عدم خروج المربعات عن زوايا البوردر المنحنية */
+    overflow: hidden; 
+    background-color: white;
+}
+
+.pattern-wrapper {
+    position: absolute;
+    /* تأكد أن القيم 0 ليلتصق بالزاوية تماماً */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    /* لضمان ظهوره فوق أي خلفيات أخرى */
+    z-index: 10; 
+}
+
+/* باقي الكود الخاص بك للمربعات صحيح وسيعمل فور إضافة ما سبق */
+.square-row {
+    display: flex;
+}
+
+.mini-square {
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 25px;
+    height: 25px;
+border: 4px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    box-shadow: 5px 10px rgba(255, 190, 153, 1);
+  
+}
+
+/* .inner-black {
+    width: 12px;
+    height: 12px;
+    background-color: black;
+} */
+
+/* الحاوية الرئيسية للقسم بالكامل */
+.mission-section-container {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* توسيط كل شيء بداخلها */
+    text-align: center;
+}
+
+/* تنسيق الهيدر (Badge, H1, P) */
+.section-title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/* تعديل الـ Badge لأنك واضعه كـ button مباشرة في الـ JSX */
+.overview-badge {
+    width: fit-content; /* ليكون على حجم النص */
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid black;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.section-title-box h1 {
+    font-size: 38px;
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+.section-title-box p {
+    max-width: 650px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* الحاوية التي تجمع الكرتين */
+.mission-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* الكرت الواحد */
+.mission-item-wrapper {
+    flex: 1;
+    background: white;
+    border: 3px solid #000;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 6px 6px 0px #000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left; /* نصوص الكروت عادة تبقى يسار أو اجعلها center حسب ذوقك */
+}
+
+/* الهيدر داخل الكرت */
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-header-flex h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.card-header-flex img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.awards-section {
+  padding: 80px 5%;
+  background-color: #FBF1F1; /* لون الخلفية العام */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- الهيدر (العنوان والبادج) --- */
+.awards-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.overview-badge {
+  background: white;
+  border: 2px solid #000;
+  padding: 6px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.awards-header h1 {
+  font-size: 38px;
+  margin: 15px 0;
+  color: #1a1a1a;
+}
+
+/* --- جسم السلايدر (الجزء السحري) --- */
+.slider-wrapper {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  overflow-x: auto; /* يسمح بالتمرير الأفقي */
+  padding: 40px 10px 60px 10px; /* مساحة للأيقونة والظل عشان ما ينقصوا */
+  scroll-snap-type: x mandatory; /* يخلي السلايدر يوقف بدقة عند كل كرت */
+  scroll-behavior: smooth; /* حركة ناعمة عند الضغط على الأسهم */
+  scrollbar-width: none; /* إخفاء شريط التمرير في Firefox */
+}
+
+/* إخفاء شريط التمرير في Chrome و Safari */
+.slider-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- تصميم الكرت الواحد --- */
+.award-card {
+  flex: 0 0 calc(33.333% - 20px); /* عرض الكرت (3 في السطر) */
+  min-width: 300px; /* أقل عرض للكرت عشان ما يصغر بزيادة */
+  background: white;
+  border: 3px solid #000; /* البوردر الأسود السميك */
+  border-radius: 15px;
+  padding: 50px 30px 30px;
+  position: relative; /* ضروري للأيقونة البارزة */
+  box-shadow: 8px 8px 0px #000; /* الظل الأسود الصلب */
+  scroll-snap-align: start; /* محاذاة الكرت عند التوقف */
+  transition: transform 0.2s ease;
+}
+
+/* الأيقونة البرتقالية البارزة فوق الكرت */
+.award-img {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #FFB38E; /* اللون البرتقالي من الصورة */
+  border: 2px solid #000;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  z-index: 5;
+}
+
+.award-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.award-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* --- الفوتر (الأسهم والعداد) --- */
+.awards-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.more-awards {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.slider-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.arrow-btn {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border: 2px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.arrow-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.arrow-btn:active {
+  transform: translate(3px, 3px); /* تأثير الضغط */
+  box-shadow: none;
+}
+
+/* /* --- History Section --- */
+.history-section {
+  padding: 80px 20px;
+  background-color: #FBF1F1;
+}
+
+/* الصندوق الأبيض الكبير */
+/* الحاوية الكبيرة تأكد أن فيها position: relative */
+/* الحاوية الرئيسية */
+.history-container-box {
+    position: relative;
+    background: white;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 60px 50px;
+    box-shadow: 10px 10px 0px #000;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow: hidden; /* لضمان عدم خروج الخط عن الحدود */
+}
+
+/* الخط العمودي البرتقالي */
+/* قمنا بتغيير الـ left ليكون متناسباً مع سنتر الدوائر */
+.timeline-line {
+    position: absolute;
+    left: 63px; /* هذه القيمة هي سر المحاذاة، عدلها بـ 1px زيادة أو نقصان لضبط السنتر */
+    top: 80px;
+    bottom: 80px;
+    width: 2px;
+    background-color: #FFB38E;
+    z-index: 1;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    gap: 10px;
+}
+
+/* حاوية الموصل الذكية */
+.timeline-connector {
+    display: flex;
+    align-items: center;
+    width: 60px; /* تقليل العرض ليقترب الكرت من الخط */
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* الدائرة التي تقع على الخط العمودي */
+.connector-circle {
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border: 2px solid #FFB38E;
+    border-radius: 50%;
+    z-index: 5;
+    position: relative; /* لتظهر فوق الخط */
+}
+
+/* الخط الأفقي النحيف */
+.connector-line {
+    height: 2px;
+    background-color: #FFB38E;
+    flex: 1; /* يملأ المسافة المتبقية */
+    position: relative;
+}
+
+/* الدائرة الصغيرة الملتصقة بالكرت */
+.connector-line::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border: 2px solid #FFB38E;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+/* تنسيق الكرت */
+.history-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex: 1;
+}
+
+.history-year-box {
+    background: white;
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 8px 20px;
+    box-shadow: 4px 4px 0px #000;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 160px;
+}
+
+.history-year-box h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0;
+}
+/* إضافة أيقونة المربعات البرتقالية بجانب السنة */
+.year-pattern-icon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+.pattern-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #FFB38E;
+  border-radius: 2px;
+}
+
+.history-year-box h2 {
+  font-size: 38px;
+  font-weight: 900;
+  margin: 0;
+}
+
+
+.history-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.history-content p {
+  font-size: 16px;
+  color: #4d4d4d;
+  line-height: 1.6;
+}
+
+
+
+.team-section {
+  padding: 100px 5%;
+  background-color: #FBF1F1;
+}
+
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.team-card {
+  background-color: rgba(255, 245, 240, 1);
+  border: 3px solid #000;
+  border-radius: 15px;
+  padding: 35px;
+  box-shadow: 10px 10px 0px #000; /* الظل القوي Neobrutalism */
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+}
+
+.team-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.member-main-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+    background-color: rgba(255, 245, 240, 1);
+}
+.member-avatar {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #000;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.member-name {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+}
+.mail-btn-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #FFE4D6;
+  border: 2px solid #000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 2px 2px 0px #000;
+}
+
+.member-details-inner-box {
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 4px 4px 0px #000;
+  text-align: left;
+}
+
+.member-qual {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.member-description {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+@media (max-width: 1440px) {
+    .form-container, .history-container-box, .team-grid, .slider-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .about-content-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .about-content-flex h1, .about-content-flex p {
+        max-width: 100%;
+    }
+    .about-hero-container {
+        padding: 60px 40px;
+    }
+    .mission-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .mission-item-wrapper {
+        width: 100%;
+    }
+
+    .award-card {
+        flex: 0 0 calc(50% - 15px);
+        min-width: 280px;
+    }
+
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+
+    .timeline-line {
+        left: 50px;
+    }
+    .timeline-connector {
+        width: 60px;
+    }
+    .history-year-box {
+        min-width: 150px;
+        padding: 10px 20px;
+    }
+    .history-year-box h2 {
+        font-size: 28px;
+    }
+}
+
+
+@media (max-width: 390px) {
+    .about-hero-container {
+        padding: 40px 20px;
+        margin: 10px;
+    }
+    .about-hero h1 {
+        font-size: 28px;
+    }
+
+
+    .pattern-wrapper {
+        transform: scale(0.7);
+        top: -5px;
+        left: -5px;
+    }
+
+
+    .award-card {
+        flex: 0 0 100%;
+    }
+    .awards-header h1 {
+        font-size: 26px;
+    }
+
+    .timeline-line {
+        display: none; 
+    }
+    .timeline-connector {
+        display: none; 
+    }
+    .history-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .history-year-box {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .history-container-box {
+        padding: 30px 15px;
+        box-shadow: 6px 6px 0px #000;
+    }
+
+    .team-card {
+        padding: 20px;
+    }
+    .team-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .member-name {
+        font-size: 20px;
+    }
+    .mail-btn-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .card-header-flex h1 {
+        font-size: 24px;
+    }
+    .mission-item-wrapper {
+        padding: 25px;
+    }
+
+    .mission-btn {
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,168 @@
+/* --- الأقسام العامة --- */
+.academics-page { background-color: #FAF5F0; }
+
+.learn-section, .gallery-section {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.learn-header {
+    text-align: center;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features-badge {
+    padding: 6px 16px;
+    border: 2px solid #262626;
+    background: white;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* --- شبكة المواد (Subjects) --- */
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.subject-card {
+    background: white;
+    border: 2px solid #262626;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 6px 6px 0px #262626;
+    text-align: center;
+}
+
+.image-stack-container {
+    position: relative;
+    height: 180px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.vertical-rectangle {
+    position: absolute;
+    width: 50px;
+    height: 110%;
+    background: #FFE4D6;
+    border: 1px solid #262626;
+    top: -5%;
+    z-index: 1;
+}
+
+.card-image-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    height: 100%;
+    border: 2px solid #262626;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.subject-image { width: 100%; height: 100%; object-fit: cover; }
+
+/* --- سلايدر الغرف (Gallery) الجديد - لا يتداخل مع Home --- */
+.room-gallery-card {
+    background: white;
+    border: 2px solid #262626;
+    border-radius: 20px;
+    padding: 150px 30px 30px 30px; /* مساحة للصور البارزة */
+    margin-top: 100px;
+    margin-bottom: 40px;
+    box-shadow: 8px 8px 0px #262626;
+    position: relative;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.room-gallery-viewport {
+    position: absolute;
+    top: -60px; /* البروز للأعلى */
+    left: 25px;
+    right: 25px;
+    height: 180px;
+    overflow: hidden;
+    border: 2px solid #262626;
+    border-radius: 15px;
+    background: white;
+    z-index: 10;
+}
+
+.room-gallery-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.room-gallery-item {
+    flex: 0 0 25%; /* 4 صور عرض */
+    height: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.room-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #262626;
+}
+
+.room-gallery-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.room-gallery-info h3 { font-size: 1.5rem; margin-bottom: 8px; }
+
+.room-gallery-nav { display: flex; gap: 10px; }
+
+.room-gallery-btn {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #262626;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.room-gallery-btn:hover { background: #FFBE99; }
+
+
+.filter-bar { display: flex; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; }
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid #262626;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.filter-btn.active { background: #FFBE99; }
+
+/* للموبايل */
+@media (max-width: 992px) {
+    .subjects-grid { grid-template-columns: repeat(2, 1fr); }
+    .room-gallery-item { flex: 0 0 50%; } /* صورتين فقط */
+}
+@media (max-width: 390px) {
+    .subjects-grid { grid-template-columns: 1fr; }
+    .room-gallery-item { flex: 0 0 100%; } /* صورة واحدة */
+    .room-gallery-footer { flex-direction: column; text-align: center; }
+}

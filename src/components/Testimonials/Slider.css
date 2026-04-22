@@ -33,18 +33,20 @@
 }
 
 
-.slider-viewport {
-  flex: 1;
-  overflow: hidden; 
-  padding: 10px 5px; 
+/* ربط التنسيق فقط بسلايدر الصفحة الرئيسية */
+.slider-section .slider-viewport {
+    flex: 1;
+    overflow: hidden; 
+    padding: 10px 5px;
+    position: relative; /* تأكد أنه ليس absolute هنا */
+    top: 0 !important; /* إلغاء الـ -60px التي سببت المشكلة */
 }
 
-.slider-track {
-  display: flex;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  gap: 30px;
+.slider-section .slider-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 30px;
 }
-
 
 .card-item {
 

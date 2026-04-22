@@ -1,6 +1,56 @@
-:root{
-font-family: "Raleway", sans-serif;
-background-color: rgba(255, 239, 229, 1)
+/* 1. الاستيراد في أول سطر دائماً */
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Gilda+Display&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 2. تعريف المتغيرات لتسهيل التحكم بكل الموقع من مكان واحد */
+:root {
+  /* الخط الأساسي */
+  --main-font: "Raleway", sans-serif;
+  /* خط العناوين (يمكنك تغييره لـ Urbanist إذا أردت) */
+  --heading-font: "Raleway", sans-serif; 
+  
+  /* الألوان الأساسية */
+  --bg-color: rgba(255, 239, 229, 1);
+  --text-color: #1a1a1a;
+  --accent-color: #FFBE99; /* اللون البرتقالي الموجود في المربعات */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Gilda+Display&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+/* 3. تصفير المسافات الافتراضية وتطبيق الخط على كل شيء */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* هذا السطر يضمن أن أي عنصر جديد يأخذ الخط تلقائياً */
+  font-family: var(--main-font);
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  /* تحسين نعومة الخط على المتصفحات */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 4. إجبار العناصر "العنيدة" على أخذ الخط */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 800; /* جعل العناوين عريضة */
+  line-height: 1.2;
+}
+
+button, input, textarea, select {
+  font-family: var(--main-font);
+}
+
+/* 5. تنسيق عام للروابط لمنع تغيير الخط أو اللون بشكل مفاجئ */
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+/* 6. كلاس اختياري للخط العربي إذا استخدمته في أي مكان */
+.arabic {
+  font-family: "Cairo", sans-serif;
+}

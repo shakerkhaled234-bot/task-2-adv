@@ -1,0 +1,240 @@
+
+.admission-container {
+  background-color: #FFF9F5; 
+  padding: 80px 10%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.admission-header {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+}
+
+.process-badge {
+  border: 2px solid #262626;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: white;
+}
+
+.admission-title {
+  font-size: 38px;
+  margin: 20px 0;
+  color: #262626;
+  font-weight: 800;
+}
+
+.admission-subtitle {
+  color: #4C4C4C;
+  line-height: 1.6;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.step-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.step-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: -5px; 
+  margin-left: 20px;
+}
+
+.step-number-box {
+  background: white;
+  border: 2.5px solid #262626;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-size: 28px;
+  font-weight: 800;
+  box-shadow: 4px 4px 0px #262626;
+  z-index: 2;
+}
+
+.connector-line {
+  width: 2.5px;
+  height: 40px;
+  background-color: #FFBE99; 
+  margin-left: 25px;
+}
+
+.step-card {
+  background: white;
+  border: 2.5px solid #262626;
+  border-radius: 18px;
+  padding: 40px 30px;
+  text-align: left;
+  box-shadow: 8px 8px 0px #262626; 
+  min-height: 200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.step-card-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #262626;
+  font-weight: 700;
+}
+
+.step-card-text {
+  color: #595959;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+
+
+.fee-container {
+  background-color: #FFF9F5;
+  padding: 80px 5%;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.fee-header {
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+}
+
+.features-badge {
+  border: 2px solid #262626;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.fee-title {
+  font-size: 40px;
+  margin: 20px 0;
+  color: #262626;
+}
+
+.fee-description {
+  color: #4C4C4C;
+  line-height: 1.6;
+}
+
+
+.table-wrapper {
+  background: white;
+  border: 2px solid #262626;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 8px 8px 0px #262626; 
+  overflow-x: auto;
+}
+
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.fee-table thead th {
+  background-color: #FFF2E5;
+  border: 1px solid #262626;
+  padding: 18px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.fee-table tbody td {
+  border: 1px solid #262626;
+  padding: 18px;
+  color: #4C4C4C;
+  background-color: white;
+}
+
+
+.secondary-table {
+  padding: 30px;
+}
+
+.table-header-box {
+  background-color: #FFF2E5;
+  border: 1px solid #262626;
+  border-radius: 10px 10px 0 0;
+  padding: 20px;
+  text-align: left;
+  border-bottom: none;
+}
+
+.table-header-box h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.service-name {
+  width: 60%;
+  font-weight: 500;
+}
+
+.service-cost {
+  width: 40%;
+  font-weight: 600;
+}
+
+
+@media (max-width: 992px) {
+  .table-wrapper {
+    padding: 15px;
+  }
+  .fee-table thead {
+    display: none; /* إخفاء الهيدر في الموبايل واستخدام data-label */
+  }
+  .fee-table tr {
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #262626;
+  }
+  .fee-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+  .fee-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #262626;
+  }
+}
+/* استجابة الشاشات (Responsive) */
+@media (max-width: 1440) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 390px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .admission-container {
+    padding: 40px 5%;
+  }
+}
+
+
+
+

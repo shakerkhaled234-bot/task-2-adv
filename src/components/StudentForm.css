@@ -1,0 +1,138 @@
+:root {
+  --main-orange: #ffbe99;
+  --dark-border: #333333;
+  --soft-bg: #fff9f5;
+  --muted-text: #595959;
+}
+
+.student-form-section {
+  padding: 60px 20px;
+  background-color: var(--soft-bg);
+}
+
+.form-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-badge {
+  border: 1.5px solid var(--dark-border);
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  background: white;
+}
+
+.form-title {
+  font-size: 36px;
+  margin: 15px 0;
+  font-weight: 800;
+}
+
+.form-description {
+  color: var(--muted-text);
+  margin-bottom: 50px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.form-card {
+  background: #ffffff;
+  border: 2px solid var(--dark-border);
+  border-radius: 12px;
+  padding: 70px 40px 40px;
+  position: relative;
+  box-shadow: 6px 6px 0px var(--dark-border); /* تأثير الـ Neo-brutalism */
+}
+
+.social-float-icons {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.social-box {
+  background: #ffe3d1;
+  border: 2px solid var(--dark-border);
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.social-box img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  text-align: left;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-field label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.input-field input,
+.input-field select,
+.input-field textarea {
+  background: #fdfdfd;
+  border: 1.5px solid var(--dark-border);
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.full-width {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.btn-submit {
+  width: 100%;
+  background: var(--main-orange);
+  border: 2px solid var(--dark-border);
+  padding: 18px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 35px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: #ffa570;
+}
+
+/* الاستجابة للموبايل */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-card {
+    padding: 60px 20px 30px;
+  }
+}

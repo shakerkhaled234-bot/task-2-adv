@@ -1,0 +1,40 @@
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    background-color: #FFFEFC;
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 12px 15px;
+    gap: 12px;
+}
+
+.contact-image-wrapper {
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.contact-image-wrapper img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.contact-item span {
+    font-weight: 500;
+    font-size: 15px;
+    color: #333;
+}

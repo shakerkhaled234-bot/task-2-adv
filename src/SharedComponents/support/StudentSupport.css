@@ -1,0 +1,106 @@
+/* StudentSupport.css */
+
+.support-container {
+  padding: 80px 5%;
+  background-color: #fff9f5; 
+  text-align: center;
+}
+
+.badge-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.badge-text {
+  background: white;
+  border: 2px solid #1a1a1a;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+
+.section-title {
+  font-size: clamp(32px, 5vw, 48px); 
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  color: #4c4c4c;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+.support-card {
+  background: #ffffff;
+  border: 2px solid #1a1a1a;
+  border-radius: 12px;
+  padding: 50px 30px 30px; 
+  position: relative;
+  text-align: left;
+
+  box-shadow: 6px 6px 0px #1a1a1a;
+  transition: transform 0.2s ease;
+}
+
+.support-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px #1a1a1a;
+}
+
+
+.icon-box {
+  position: absolute;
+  top: -25px;
+  left: 25px;
+  background-color: #ffe4d1;
+  border: 2px solid #1a1a1a;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.support-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.support-card p {
+  color: #595959;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .support-container {
+    padding: 50px 20px;
+  }
+  
+  .cards-grid {
+    gap: 50px; 
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
